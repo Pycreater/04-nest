@@ -27,6 +27,11 @@ export class UsersController {
         return this.userService.fetchUserById(id);
     }
 
+    @Get(":name")
+    getByName(@Param('name') name: string) {
+        return `${name}`;
+    }
+
 
 
 }
